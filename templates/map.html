@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>ASD Map</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <div id="datalist-container">
+      <form id="regForm" action="search_control.php" method="POST">
+        <div class="buttons-steps-group">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)"><</button>
+          <div>
+            <span class="step">01 / 03</span>
+            <span class="step">02 / 03</span>
+            <span class="step">03 / 03</span>
+          </div>
+        </div>
+
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab animatedFadeInUp animated fadeInUp">
+          <span class="text-tab">
+            Dans quel pays souhaitez-vous<br />développer votre activité ?
+          </span>
+          <hr class="hr-spacer" />
+          <select
+            class="selects"
+            id="countrieslist"
+            type="text"
+            name="countList"
+          >
+            <option id="default-country" value="" selected disabled
+              >Choisissez un pays</option
+            >
+            <option value="france">France</option>
+            <option value="allemagne">Allemagne</option>
+            <option value="paysbas">Pays-Bas</option>
+            <option value="dubai">Dubaï</option>
+            <option value="hongkong">Hong-Kong</option>
+            <option value="indonesia">Indonésie</option>
+            <option value="maroc">Maroc</option>
+            <option value="canada">Canada</option>
+            <option value="states">Etats-Unis</option>
+          </select>
+        </div>
+
+        <div class="tab animatedFadeInUp animated fadeInUp">
+          <span class="text-tab">
+            De quel service<br />avez-vous besoin ?
+          </span>
+          <hr class="hr-spacer" />
+          <select
+            class="selects"
+            id="servicesoptions"
+            type="text"
+            name="servList"
+          >
+            <option id="default-service" value="" selected disabled
+              >Choisissez un service</option
+            >
+            <option value="fiscal">Fiscal</option>
+            <option value="douane">Douane</option>
+            <option value="social">Social</option>
+          </select>
+        </div>
+
+        <div class="tab animatedFadeInUp animated fadeInUp">
+          <span class="text-tab">
+            Découvrez nos prestations<br />
+            <span id="selected-service"></span> en
+            <span id="selected-country"></span>
+          </span>
+          <ul id="serviceslist" class="columns" data-columns="2"></ul>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/map.js"></script>
+    <script src="js/fixstepindicator.js"></script>
+    <script src="js/nextprev.js"></script>
+    <script src="js/showtab.js"></script>
+  </body>
+</html>

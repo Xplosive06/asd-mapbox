@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "DrukTextWide-Medium";
+  src: local("DrukTextWide-Medium"),
+    url("../assets/DrukTextWide-Medium.woff") format("woff");
+}
+
+#datalist-container {
+  background-color: transparent;
+  font-size: 19px;
+  padding: 8px 12px;
+  position: absolute;
+  width: 25%;
+  text-align: justify;
+  top: 200px;
+}
+
+body {
+  font-family: "DrukTextWide-Medium";
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url("../assets/image.jpg");
+  background-size: cover;
+  background-position-y: bottom;
+}
+
+/* Style the form */
+#regForm {
+  margin: 100px auto;
+  padding: 100px;
+  width: 100%;
+  min-width: 400px;
+}
+
+#regForm {
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 73%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 73%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 73%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.text-tab {
+  color: #093182;
+  text-align: justify;
+  line-height: 1.6em;
+}
+
+.buttons-steps-group {
+  display: flex;
+}
+
+.hr-spacer {
+  border: none;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+.step {
+  display: none;
+  margin: 0px 10px;
+  font-size: small;
+  color: #1f317e;
+  font-family: "Muli", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+/* Mark the active step: */
+.step.active {
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+select {
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 15px;
+  width: 55%;
+  font-family: "Muli";
+  font-weight: 600;
+  text-align-last: center;
+  letter-spacing: 0.2em;
+  border: solid 1.5px;
+  border-radius: 5px;
+}
+
+#serviceslist {
+  display: block;
+  width: 800px;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+}
+
+#serviceslist li {
+  font-size: 13px;
+  border-bottom: solid 1px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  list-style: none;
+  font-family: "Muli";
+  color: #093182;
+  transition: transform 0.2s; /* Animation */
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+}
+#serviceslist a {
+  text-decoration: none;
+}
+
+li:hover {
+  transform: scale(1.02);
+  font-weight: 600;
+}
+
+#selected-service,
+#selected-country {
+  text-transform: capitalize;
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,100px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,100px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+.liArrow {
+  background:transparent url(../assets/angle-right-solid.svg) no-repeat right 0 top 50%;
+  background-size: 10px;
+}
