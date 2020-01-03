@@ -1,6 +1,9 @@
 <?php
+/**
+ *  @package AsdMapBox
+ */
 
-namespace Inc;
+namespace Inc\Base;
 
 class Activate
 {

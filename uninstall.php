@@ -1,4 +1,7 @@
 <?php
+/**
+ *  @package AsdMapBox
+ */
 
 /**
  * Plugin uninstall
