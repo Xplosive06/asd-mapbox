@@ -1,0 +1,17 @@
+{
+    "name": "mnotta/asd-mapbox",
+    "description": "ASD MapBox with form",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "MNotta",
+            "email": "mnotta@asd-int.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}
