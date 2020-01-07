@@ -14,11 +14,12 @@
   top: 200px;
 }
 
-/* body {
+.body-map body {
   font-family: "DrukTextWide-Medium";
   margin: 0;
   padding: 0;
-} */
+}
+
 #map {
   position: absolute;
   top: 0;
@@ -96,12 +97,12 @@
   display: block;
 }
 
-/* button {
+.body-map button {
   background-color: transparent;
   border: none;
 }
 
-select {
+.body-map select {
   background-color: transparent;
   text-transform: uppercase;
   padding: 15px;
@@ -112,7 +113,7 @@ select {
   letter-spacing: 0.2em;
   border: solid 1.5px;
   border-radius: 5px;
-} */
+} 
 
 #serviceslist {
   display: block;
@@ -139,10 +140,10 @@ select {
   text-decoration: none;
 }
 
-/* li:hover {
+.body-map li:hover {
   transform: scale(1.02);
   font-weight: 600;
-} */
+} 
 
 #selected-service,
 #selected-country {

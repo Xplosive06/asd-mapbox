@@ -6,7 +6,9 @@
 
 namespace Inc\Base;
 
-class Enqueue
+use \Inc\Base\BaseController;
+
+class Enqueue extends BaseController
 {
   public function register()
   {
@@ -16,10 +18,10 @@ class Enqueue
   function enqueue()
   {
     // enqueue all our scripts
-    wp_enqueue_style('mypluginstyle', PLUGIN_URL . 'assets/css/style.css');
-    wp_enqueue_script('mypluginscript', PLUGIN_URL . 'assets/js/fixstepindicator.js');
-    wp_enqueue_script('mypluginscript', PLUGIN_URL . 'assets/js/map.js');
-    wp_enqueue_script('mypluginscript', PLUGIN_URL . 'assets/js/nextprev.js');
-    wp_enqueue_script('mypluginscript', PLUGIN_URL . 'assets/js/showtab.js');
+    wp_enqueue_style('mypluginstyle', $this->plugin_url . 'assets/css/style.css');
+    wp_enqueue_script('mypluginscript', $this->plugin_url . 'assets/js/fixstepindicator.js');
+    wp_enqueue_script('mypluginscript', $this->plugin_url . 'assets/js/map.js');
+    wp_enqueue_script('mypluginscript', $this->plugin_url . 'assets/js/nextprev.js');
+    wp_enqueue_script('mypluginscript', $this->plugin_url . 'assets/js/showtab.js');
   }
 }
